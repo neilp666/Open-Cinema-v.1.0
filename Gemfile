@@ -24,5 +24,7 @@ gem 'spring',        group: :development
 # Use postgres as the database in production
 gem 'pg', group: :production
 
+gem 'activeadmin', github: 'gregbell/active_admin'
+gem 'devise'
 # add 12 factor for heroku 
 gem 'rails_12factor', group: :production
