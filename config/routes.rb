@@ -6,6 +6,9 @@ Rails.application.routes.draw do
   # Support Stripe Payments through charges
 
   resources :charges
+
+  # Route for showing purchase
+  resources :purchases, only: [:show]
   
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
