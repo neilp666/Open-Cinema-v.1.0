@@ -55,6 +55,9 @@ GEM
       unf (>= 0.0.5, < 1.0.0)
     erubis (2.7.0)
     execjs (2.4.0)
+    figaro (0.7.0)
+      bundler (~> 1.0)
+      rails (>= 3, < 5)
     hike (1.2.3)
     http-cookie (1.0.2)
       domain_name (~> 0.5)
@@ -143,6 +146,7 @@ PLATFORMS
 DEPENDENCIES
   bootstrap-sass (~> 3.3.4)
   coffee-rails (~> 4.0.0)
+  figaro
   jbuilder (~> 2.0)
   jquery-rails
   pg

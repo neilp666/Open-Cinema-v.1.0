@@ -21,6 +21,21 @@
            <div class="caption">
         <h3>Thumbnail label</h3>
         <p>...</p>
+        
+        <p><%= form_tag charges_path do %>
+              <article>
+                <label class="amount">
+                  <span>Amount: £0.00</span>
+                </label>
+              </article>
+
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                      data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                      data-description="Open Cinema Movie Night"
+                      data-amount="000"></script>
+            <% end %></p>
+
+
         <p><a href="#" class="btn btn-primary" role="button">Button</a> <a href="#" class="btn btn-default" role="button">Button</a></p>
       </div>
     </div>
