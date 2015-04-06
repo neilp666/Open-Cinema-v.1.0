@@ -1,10 +1,10 @@
-
+<%= render 'layouts/header' %>
 
     <div class="container">
 
       <div class="starter-template">
         <h1>Welcome To Open Cinema</h1>
-        <p class="lead">We are an award-winning network of community cinemas across the UK and Ireland. We've secured seed investment to build a prototype digital platform to take cinema into the 21st century!</p>
+        <p class="lead">We are an award-winning network of community cinemas across the UK and Ireland. </br>We've secured seed investment to build a prototype digital platform <br/> to take cinema into the 21st century!</p>
       </div>
 
     </div><!-- /.container -->
@@ -12,15 +12,22 @@
 
 <div class="container">
 
-  
+  <div class="center">
     <div class="row">
         <div class="col-md-4">
           <div class="thumbnail">
              <!--<img src="..." alt="...">-->
-             <%= image_tag('header-image.jpg') %>
+             <%= image_tag('IMG_3465.JPG') %>
            <div class="caption">
-        <h3>Thumbnail label</h3>
-        <p>...</p>
+        <h3>Now Showing: <b><%= @product.title %></b></h3>
+        <h4>Venue: Electric Works - Sheffield</h4>
+        <h4><b><i class="fa fa-calendar"></i> 8th April <i class="fa fa-clock-o"></i>18.00</b> </h4>
+        <h4>Venue Manager: <%= @product.author %></h4>
+        <P><strong>Electric Works</strong> is a state-of-the-art
+ Serviced office space for a vibrant community of creative,
+  digital and media businesses in Sheffield</p>
+        <p>Price: FREE</p>
+
         
         <p><%= form_tag charges_path, id: "chargeForm" do %>
             <script src="https://checkout.stripe.com/checkout.js"></script>
@@ -42,7 +49,7 @@
      document.getElementById('btn-buy').addEventListener('click', function(e) {
       handler.open({
         name: 'Open Cinema',
-        description: 'Open Cinema Movie Night (Free)',
+        description: '<%= @product.title %> (Free) <%= @product.author %>',
         amount: 000
     });
     e.preventDefault();
@@ -57,6 +64,34 @@
         
     </div>
   
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   <div class="row">
         <div class="col-lg-12">
         <br><br>
@@ -65,6 +100,7 @@
         </div>
     </div>
 </div>
+
 
 
 

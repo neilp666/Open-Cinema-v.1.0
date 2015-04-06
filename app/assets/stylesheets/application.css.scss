@@ -15,13 +15,19 @@
  @import "bootstrap";
 
  body {
-  padding-top: 50px;
+  padding-top: 20px;
+  background-color: #F5F5F1;
+  color: #333333;
+  font-family: Arial, Helvetica, sans-serif;
 }
 .starter-template {
   padding: 40px 15px;
   text-align: center;
 }
 
+.center {
+  text-align: center;
+}
 
 
 
@@ -44,7 +50,7 @@
 }
 
 .dotmatrix {
-    
+    background: url('<%= asset_path "dot-matrix.svg" %>') 50% 0% repeat-y #fff;
     height: 100%;
     background-size: 50%;
     width: 10%;

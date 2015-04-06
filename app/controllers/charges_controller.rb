@@ -14,7 +14,7 @@ class ChargesController <ApplicationController
     :customer    => customer.id,
     :amount      => @amount,
     #:amount      => params[:amount],
-    :description => 'Open Cinema Movie Night (Free)',
+    :description => "Open Cinema Movie Night",
     :currency    => 'gbp'
   )
 
