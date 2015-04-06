@@ -11,6 +11,7 @@
  * file per style scope.
  *
  */
+ @import url(https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800);
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
@@ -33,6 +34,18 @@
 #modal-right {
     width: 35%;
 }
+
+h1 {
+  font-family: 'Helvetica Neue', Helvetica, arial, serif;
+  text-transform: uppercase;
+
+
+        }
+
+h2, h3 { font-family: 'Open sans','Helvetica Neue', Helvetica;
+    font-weight: 100;
+  font-size: 24px;
+    }
 
 
 
