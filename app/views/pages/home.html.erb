@@ -22,7 +22,9 @@
         <h3>Now Showing: <b><%= @product.title %> <i class="fa fa-film"></i></b></h3>
         <h4>Venue: Electric Works - Sheffield</h4>
         <h4><b><i class="fa fa-calendar"></i> 8th April <i class="fa fa-clock-o"></i> 18.00</b> </h4>
-        <h4>Venue Manager: <%= @product.author %></h4>
+        <p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
+  Venue Manager: Colin Tan <i class="fa fa-user"></i>
+</button></p>
         <P><strong>Electric Works</strong> is a state-of-the-art
  Serviced office space for a vibrant community of creative,
   digital and media businesses in Sheffield</p>
@@ -66,32 +68,6 @@
   
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   <div class="row">
         <div class="col-lg-12">
         <br><br>
@@ -101,7 +77,43 @@
     </div>
 </div>
 
+<!-- Modal -->
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
 
+        <h4 class="modal-title" id="myModalLabel">Welcome To Open Cinema</h4>
+      </div>
+      <div class="modal-body">
+
+        <div id="modal-left" class="pull-left">
+                <p><strong>Hey, I'm Colin Tan</strong></p>
+                <p>I am the Entreprenuer in Residence at DotForge
+                A Social Ventures Accelerator based in sheffield </p>
+                <P>Dotforge is an initiative created to attract and nurture top startups from around the world by providing them with pre-seed capital, mentorship and the environment they need to build and grow their business.</p>
+
+                <p><b>Now Showing: Fight Club</b></p>
+
+                <p> If you're searching for a movie that will appeal to your sarcastic sense of humor and challenge your mind, then Fight Club is your film. Fight Club is by far my favorite movie, and it should also be your favorite movie.</p>
+
+                <p>In addition to an incredible plot, the cinematography is second to none. David Fincher (Director of Seven and The Game) has once again orchestrated an excellent movie displayed in vivid scenes by challenging visual effects. Photogrammetry was extensively used in Fight Club and truly sets it apart from the mainstream of Hollywood films. These effects are like none that I have seen in other movies. </p>
+
+                <p>Follow me on Twitter <a href="https://twitter.com/dotforgeimpact" target="_blank">@dotforgeimpact</a>
+                 Website: <a href="http://www.dotforgeaccelerator.com/" target="_blank">Dot Forge Accelertor</a></p>
+            </div>
+            <div id="modal-right" class="pull-left">
+                <%= image_tag('colin.jpeg', alt: 'Colin Tan') %>
+            </div>
+      
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 
