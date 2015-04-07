@@ -21,6 +21,7 @@
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 }
+
 .starter-template {
   padding: 40px 15px;
   text-align: center;
@@ -47,7 +48,7 @@ h2, h3 { font-family: 'Open sans','Helvetica Neue', Helvetica;
   font-size: 24px;
     }
 
-
+/* RECEIPT */
 
 #content-receipt {
     background: #eee;
@@ -67,13 +68,6 @@ h2, h3 { font-family: 'Open sans','Helvetica Neue', Helvetica;
     z-index: 1;
 }
 
-.dotmatrix {
-    background: url('<%= asset_path "dot-matrix.svg" %>') 50% 0% repeat-y #fff;
-    height: 100%;
-    background-size: 50%;
-    width: 10%;
-    position: absolute;
-}
 
 .dotmatrix.left {
     border-right: 1px dotted #ccc;
@@ -84,6 +78,15 @@ h2, h3 { font-family: 'Open sans','Helvetica Neue', Helvetica;
     border-left: 1px dotted #ccc;
     right: 0px;
 }
+
+.dotmatrix {
+    background: url('<%= asset_path "dot-matrix.svg" %>') 50% 0% repeat-y #fff;
+    height: 100%;
+    background-size: 50%;
+    width: 10%;
+    position: absolute;
+}
+
 
 #receipt-content {
     position: absolute;
@@ -120,15 +123,11 @@ h2, h3 { font-family: 'Open sans','Helvetica Neue', Helvetica;
 }
 
 #receipt-footer small {
-    font-size: 10px;
+    font-size: 16px;
     font-weight: 300;
 }
 
 
 /* RESPONSIVE */
 
-@media (max-width: 991px) {
-    #details-aside {
-        margin-top: 40px;
-    }
-}
+

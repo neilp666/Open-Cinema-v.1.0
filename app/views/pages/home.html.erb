@@ -23,58 +23,24 @@
         <h4>Venue: Electric Works - Sheffield</h4>
         <h4><b><i class="fa fa-calendar"></i> 8th April <i class="fa fa-clock-o"></i> 18.00</b> </h4>
         <p><button type="button" class="btn btn-primary btn-lg" data-toggle="modal" data-target="#myModal">
-  Venue Manager: Colin Tan <i class="fa fa-user"></i>
-</button></p>
+        Venue Manager: Colin Tan <i class="fa fa-user"></i>
+        </button></p>
+
         <P><strong>Electric Works</strong> is a state-of-the-art
- Serviced office space for a vibrant community of creative,
-  digital and media businesses in Sheffield</p>
-        <p>Price: FREE</p>
-
-        
-        <p><%= form_tag charges_path, id: "chargeForm" do %>
-            <script src="https://checkout.stripe.com/checkout.js"></script>
-                 <%= hidden_field_tag 'stripeToken' %>
-                 <%= hidden_field_tag 'stripeEmail' %>
-                  
-                 <button id="btn-buy" type="button" class="btn btn-success btn-lg btn-block"><span class="glyphicon glyphicon-ok"></span> I want this!</button>
-             <script>
+            Serviced office space for a vibrant community of creative,
+            digital and media businesses in Sheffield</p>
+           <p>Price: <b>ABSOLUTELY FREE!</b></p>
 
 
-             var handler = StripeCheckout.configure({
-      key: '<%= Rails.configuration.stripe[:publishable_key] %>',
-      token: function(token, arg) {
-        document.getElementById("stripeToken").value = token.id;
-        document.getElementById("stripeEmail").value = token.email;
-        document.getElementById("chargeForm").submit();
-      }
-    });
-     document.getElementById('btn-buy').addEventListener('click', function(e) {
-      handler.open({
-        name: 'Open Cinema',
-        description: '<%= @product.title %> (Free) <%= @product.author %>',
-        amount: 000
-    });
-    e.preventDefault();
-   })
-  </script>
-<% end %>
-
+        <p><button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#myModal1">
+        <i class="fa fa-check-square-o"></i>
+</i>I want this
+        </button></p>
     
-      </div>
-    </div>
-  </div>
-        
-    </div>
   
+    
 
-
-  <div class="row">
-        <div class="col-lg-12">
-        <br><br>
-          <p class="pull-right"><a href="http://www.opencinema.net">Open Cinema</a> &nbsp; ©Copyright 2015<sup>TM</sup></p>
-        <br><br>
-        </div>
-    </div>
+  
 </div>
 
 <!-- Modal -->
@@ -88,7 +54,7 @@
       </div>
       <div class="modal-body">
 
-        <div id="modal-left" class="pull-left">
+        
                 <p><strong>Hey, I'm Colin Tan</strong></p>
                 <p>I am the Entreprenuer in Residence at DotForge
                 A Social Ventures Accelerator based in sheffield </p>
@@ -102,14 +68,40 @@
 
                 <p>Follow me on Twitter <a href="https://twitter.com/dotforgeimpact" target="_blank">@dotforgeimpact</a>
                  Website: <a href="http://www.dotforgeaccelerator.com/" target="_blank">Dot Forge Accelertor</a></p>
-            </div>
+        
             <div id="modal-right" class="pull-left">
                 <%= image_tag('colin.jpeg', alt: 'Colin Tan') %>
             </div>
-      
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal fade" id="myModal1" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+
+        <h2 class="modal-title" id="myModalLabel"><b>Open Cinema Presents</h2>
+      </div>
+      <div class="modal-body">
+                <h1><b>Fight Club</b> <i class="fa fa-file-video-o"></i></h1>
+                <h3><b><i class="fa fa-clock-o"></i> 18.00  <i class="fa fa-calendar"></i> 8th April 2015</b></h3>
+                <h4> If you're searching for a movie that will appeal to your sarcastic sense of humor and challenge your mind, then Fight Club is your film.</h4>
+                <p>Follow Open Cinema on Twitter <a href="https://twitter.com/weareopencinema" target="_blank">@weareopencinema</a>
+                
+                <p>To get your tickets simply fill in the form below</p>
+
+                <iframe src="https://docs.google.com/forms/d/1rQxKX0bxVOwMiycAJQWenI-dIjBbsqKRrdOkCLMu7LY/viewform?embedded=true#start=embed" width="400" height="400" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
+
+                <p>Taking cinema into the 21st century: <a href="http://www.opencinema.net/" target="_blank">Open Cinema</a></p>
+      </div>
+      <div class="modal-footer">
+        
       </div>
     </div>
   </div>
